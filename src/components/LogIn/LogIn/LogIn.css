@@ -1,0 +1,17 @@
+.gButton{
+    display: flex;
+    align-items: center;
+    border: 1px solid lightGrey!important;
+    height: 46px;
+    border-radius: 50px;
+    width: 350px;
+    margin: 100px auto;
+}
+.googleButton{
+    border: none;
+    outline: none!important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    background: none!important;
+}

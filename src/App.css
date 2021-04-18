@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.btn-black{
+  padding: 5px 15px;
+  border-radius: 3px;
+  color: white;
+  background-color: black;
+  border: none;
+}
+.txt-color {
+  color: #01F897;
+}
