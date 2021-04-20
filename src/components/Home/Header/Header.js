@@ -12,7 +12,7 @@ import { UserContext } from '../../../App';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const { loggedInUser, setLoggedInUser } = useContext(UserContext)
     return (
         <header>
             <div className="header pb-4">
@@ -33,9 +33,6 @@ const Header = () => {
                                         <Link className="nav-link fw-bold" to="">Home</Link>
                                     </li>
                                     <li class="nav-item">
-                                        <Link className="nav-link fw-bold" to="footer">Our Team</Link>
-                                    </li>
-                                    <li class="nav-item">
                                     <Link className="nav-link fw-bold" to="dashboard">Dashboard</Link>
                                     </li>
                                     <li class="nav-item">
@@ -53,7 +50,7 @@ const Header = () => {
                         <div className="col-md-6 align-self-center">
                             <h1>COMPUTER<br /><span className="fw-bold">REPAIR &#38; SUPPORT</span></h1>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quis similique nesciunt eos asperiores dolores?</p>
-                            <button className="btn-black">Hire us</button>
+                            <button className="btn-black w-25">Hire us</button>
                         </div>
                         <div className="col-md-6 align-self-center">
                             <img className="img-fluid" src={banner} alt="" />

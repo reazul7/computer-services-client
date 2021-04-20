@@ -11,6 +11,7 @@ const AddService = () => {
         formData.append('file', file);
         formData.append('title', adminInfo.title);
         formData.append('description', adminInfo.description);
+        formData.append('price', adminInfo.price);
         fetch('https://warm-springs-45915.herokuapp.com/addAdmin', {
             method: 'POST',
             body: formData
@@ -37,10 +38,11 @@ const AddService = () => {
                 <div className="com-md-3">
                     <Sidebar></Sidebar>
                 </div>
-                <div className="com-md-9 mt-5">
+                <div className="com-md-9 mt-5 p-0 m-0">
                     <form action="" onSubmit={handleSubmit}>
+                        <div className="container">
                         <div className="row">
-                            <div className="col-md-6">
+                            <div className="col-md">
                                 <div className="form-group">
                                     <label className="fw-bold" htmlFor="">Service Title</label>
                                     <input onBlur={handleBlur} type="text" name="title" placeholder="Title" className="form-control" />
@@ -50,14 +52,20 @@ const AddService = () => {
                                     <br />
                                     <textarea onBlur={handleBlur} name="description" id="" cols="60" rows="5" placeholder="Enter description"></textarea>
                                 </div>
-
-                            </div>
-                            <div className="col-md-6">
                                 <div className="form-group">
-                                    <label className="fw-bold" htmlFor="">Icon</label>
+                                    <label className="fw-bold" htmlFor="">Price</label>
+                                    <br />
+                                    <input onBlur={handleBlur} name="price" type="number" id="" placeholder="Enter Price"></input>
+                                </div>
+                            </div>
+                            
+                            <div className="col-md">
+                                <div className="form-group">
+                                    <label className="fw-bold" htmlFor="">Picture</label>
                                     <input onChange={handleFileChange} type="file" name="file" placeholder="Upload Image" className="form-control" />
                                 </div>
                             </div>
+                        </div>
                         </div>
                         <input type="submit" value="Click here" />
                     </form>

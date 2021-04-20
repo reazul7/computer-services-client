@@ -5,7 +5,7 @@ import ParticularUser from '../ParticularUser/ParticularUser';
 
 
 const UserService = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const { loggedInUser, setLoggedInUser } = useContext(UserContext)
     const [particularUser, setParticularUser] = useState([])
     useEffect(() => {
         fetch("https://warm-springs-45915.herokuapp.com/seeParticularService?email=" + loggedInUser.email)
@@ -28,7 +28,7 @@ const UserService = () => {
                     </div>
                     <div className="row">
                         {
-                            particularUser.map(user => <ParticularUser key={user._id} ParticularUser={user}></ParticularUser>)
+                            particularUser.map(user => <ParticularUser key={user._id} particularUser={user}></ParticularUser>)
                         }
                     </div>
                 </div>

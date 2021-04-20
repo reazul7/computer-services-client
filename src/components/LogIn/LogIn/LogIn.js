@@ -10,7 +10,7 @@ import logo from '../../../images/logo-com-service.svg'
 import googleIcon from '../../../images/google.png' ;
 
 const LogIn = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const { loggedInUser, setLoggedInUser } = useContext(UserContext)
     const history = useHistory();
     const location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
@@ -28,17 +28,19 @@ const LogIn = () => {
                 var { displayName, email, photoURL } = result.user;
                 const signInUser = { name: displayName, email, photo: photoURL };
                 setLoggedInUser(signInUser);
+                // localStorage.setItem('user', JSON.stringify(signInUser));
                 history.replace(from);
             }).catch((error) => {
                 var errorCode = error.code;
                 var errorMessage = error.message;
                 var email = error.email;
                 var credential = error.credential;
+                console.log(errorCode, errorMessage, email, credential);
             });
     }
     return (
         <div >
-            <Link style={{ textAlign: 'center', color: 'black'}} class="navbar-brand d-sm-block mt-5 pt-5" href="#"><img style={{ width: '50px' }} src={logo} alt="" /> Computer Services</Link>
+            <Link to="" style={{ textAlign: 'center', color: 'black'}} class="navbar-brand d-sm-block mt-5 pt-5" href="#"><img style={{ width: '50px' }} src={logo} alt="" /> Computer Services</Link>
             <div>
                 <div className="gButton">
                     <img style={{ width: "25px" }} className="ms-3" src={googleIcon} alt="" />

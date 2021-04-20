@@ -3,7 +3,7 @@ import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 
 const Review = () => {
-    const { loggedInUser, setLoggedInUser } = useContext(UserContext)
+    const { loggedInUser } = useContext(UserContext)
     const [review, setReview] = useState({});
     const [file, setFile] = useState(null);
 
@@ -22,7 +22,7 @@ const Review = () => {
         e.preventDefault();
         const formData = new FormData();
         formData.append('file', file);
-        formData.append('newFile', loggedInUser.photo)
+        formData.append('newFile', loggedInUser.photo);
         formData.append('name', loggedInUser.name);
         formData.append('designation', review.designation);
         formData.append('description', review.description);

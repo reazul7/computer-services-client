@@ -3,7 +3,7 @@ import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 
 const MakeAdmin = () => {
-    const { loggedInUser, setLoggedInUser } = useContext(UserContext)
+    const { loggedInUser } = useContext(UserContext)
     const [admin, setAdmin] = useState({})
 
     const handleBlur = (e) => {

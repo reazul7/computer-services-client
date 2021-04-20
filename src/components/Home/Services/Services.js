@@ -11,7 +11,7 @@ const Services = () => {
     },[])
     return (
         <div className="container my-5 pt-5">
-            <div className="row">
+            <div className="row mb-3">
                 <h3 className="text-center fw-bold">Our <span className="txt-color">Services</span></h3>
             </div>
             <div className="d-flex row justify-content-center">

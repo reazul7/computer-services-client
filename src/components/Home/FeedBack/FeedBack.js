@@ -11,6 +11,7 @@ const FeedBack = () => {
             .then(res => res.json())
             .then(data => setFeedBack(data))
     },[])
+
     return (
         <div className="container my-5">
             <div className="row">

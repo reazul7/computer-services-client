@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../../../App';
+import React, { useEffect, useState } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 import Dropdown from 'react-dropdown';
+import './ServiceList.css';
 
 const options = [
     { value: 'pending', label: 'pending' },
@@ -10,7 +10,6 @@ const options = [
 ]
 
 const ServiceList = () => {
-    const { loggedInUser, setLoggedInUser } = useContext(UserContext)
     const [showAllData, setShowAllData] = useState([])
 
     useEffect(() => {
@@ -41,12 +40,12 @@ const ServiceList = () => {
     }
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid w-100">
             <div className="row">
                 <div className="col-md-3">
                     <Sidebar></Sidebar>
                 </div>
-                <div className="col-md-9 col-sm-12">
+                <div className="col-md-9">
                     <table className="table">
                         <thead>
                             <tr>
@@ -68,7 +67,7 @@ const ServiceList = () => {
                                         <td>{showData.service}</td>
                                         <td>{showData.description}</td>
                                         <td>
-                                        <Dropdown onChange={(e) => { handleChange(e, `${showData._id}`) }} options={options} value={showData.status} />
+                                        <Dropdown onChange={(e) => { handleChange(e, `${showData._id}`) }} className="bg=dark" options={options} value={showData.status} />
                                         </td>
                                     </tr>
                                 )

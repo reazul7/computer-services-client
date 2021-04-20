@@ -33,7 +33,7 @@ const Sliders = () => {
     return (
         <section className="slider text-white py-5">
             <div className="container">
-                <h1>Here are some of our works</h1>
+                <h3 className="text-center fw-bold">Our <span className="txt-color">Labrador</span> Picture</h3>
                 <div className="row">
                     <div className="col-12">
                         <Carousel
