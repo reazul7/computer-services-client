@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import face from '../../../images/face.png';
 import FeedBackDetails from '../FeedBackDetails/FeedBackDetails';
 
 

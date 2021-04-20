@@ -19,6 +19,7 @@ export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
 
+  //login save
   // useEffect(() => {
   //   const userData = localStorage.getItem("user");
   //   if (!userData) {
@@ -38,7 +39,6 @@ function App() {
           <Route path="/login">
             <LogIn></LogIn>
           </Route>
-
           <PrivateRoute path="/dashboard">
             <Dashboard></Dashboard>
           </PrivateRoute>
@@ -48,7 +48,6 @@ function App() {
           <PrivateRoute path="/placeService/:id">
             <PlaceService></PlaceService>
           </PrivateRoute>
-
           <Route path="/serviceListO">
             <UserService></UserService>
           </Route>
