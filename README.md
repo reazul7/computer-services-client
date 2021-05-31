@@ -8,7 +8,7 @@
 
 ## Hi there 👋, 
 ## I am Reazul Islam Bhuiyan. A Full-Stack Developer & A quick learler. 
-## [See My Resume](https://drive.google.com/file/d/1LkBzrqWz6c9x4NNTXzgn6p7OwONWzpoK/view)  || [Download Resume](https://drive.google.com/uc?export=download&id=1LJmqJk2MoqLS6yNC_oBBN5_156Xa2h0t)
+## [See My Resume](https://drive.google.com/file/d/1LJmqJk2MoqLS6yNC_oBBN5_156Xa2h0t/view?usp=sharing)  || [Download Resume](https://drive.google.com/uc?export=download&id=1LJmqJk2MoqLS6yNC_oBBN5_156Xa2h0t)
 
 
 I am always ready to work hard and it helps me learn faster. And I have good knowledge in Web Development with experience in building Web Applications used React.js for client-side, Node.js/Express.js for server-side, and MongoDB for the database.
