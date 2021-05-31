@@ -26,6 +26,7 @@ const ManageService = () => {
             .then((results) => setServices(results));
         }
       });
+      
   };
 
   return (

@@ -13,6 +13,7 @@ import MakeAdmin from "./components/Dashboard/MakeAdmin/MakeAdmin";
 import Order from "./components/Dashboard/Order/Order";
 import Review from "./components/Dashboard/Review/Review";
 import NotFound from "./components/NotFound/NotFound";
+import ManageService from "./components/Dashboard/ManageService/ManageService";
 
 export const UserContext = createContext();
 
@@ -62,6 +63,9 @@ function App() {
           </Route>
           <Route path="/review">
             <Review></Review>
+          </Route>
+          <Route path="/manageService">
+            <ManageService/>
           </Route>
           <Route path="*">
             <NotFound></NotFound>
