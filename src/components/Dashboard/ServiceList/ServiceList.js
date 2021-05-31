@@ -18,11 +18,13 @@ const ServiceList = () => {
             .then(results => setShowAllData(results))
     }, [])
 
-    const handleChange = (event, id) => {
+    const handleStateChange = (state, id) => {
+        console.log('object');
+        console.log(state, id);
 
         fetch(`https://warm-springs-45915.herokuapp.com/updateSurviceById/${id}`, {
             method: 'PATCH',
-            body: JSON.stringify({ status: event.value }),
+            body: JSON.stringify({ status: state }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             }
@@ -30,10 +32,10 @@ const ServiceList = () => {
             .then(response => response.json())
             .then(data => {
                 if (data) {
-                    const newData = [...showAllData];
-                    newData.status = data;
-                    setShowAllData(newData)
-                    alert("You ordered successfully")
+                    fetch('https://warm-springs-45915.herokuapp.com/seeAllService')
+                        .then(res => res.json())
+                        .then(results => setShowAllData(results))
+                    alert("state update successfully")
                 }
             })
 
@@ -58,7 +60,7 @@ const ServiceList = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {
+                        {
                                 showAllData.map((showData, index) =>
                                     <tr>
                                         <td>{index + 1}</td>
@@ -67,7 +69,17 @@ const ServiceList = () => {
                                         <td>{showData.service}</td>
                                         <td>{showData.description}</td>
                                         <td>
-                                        <Dropdown onChange={(e) => { handleChange(e, `${showData._id}`) }} className="bg=dark" options={options} value={showData.status} />
+                                            <div className="dropdown">
+                                                <button className="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    {showData.status}
+                                                </button>
+
+                                                <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                    <li><button onClick={() => handleStateChange('pending', showData._id)} className="dropdown-item" href="/">Pending</button></li>
+                                                    <li><button onClick={() => handleStateChange('working', showData._id)} className="dropdown-item" href="/">Working</button></li>
+                                                    <li><button onClick={() => handleStateChange('done', showData._id)} className="dropdown-item" href="/">Done</button></li>
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
                                 )
