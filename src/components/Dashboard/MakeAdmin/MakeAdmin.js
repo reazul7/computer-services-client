@@ -1,49 +1,78 @@
-import React, { useContext, useState } from 'react';
-import { UserContext } from '../../../App';
-import Sidebar from '../Sidebar/Sidebar';
+import React, { useContext, useState } from "react";
+import { UserContext } from "../../../App";
+import Sidebar from "../Sidebar/Sidebar";
 
 const MakeAdmin = () => {
-    const { loggedInUser } = useContext(UserContext)
-    const [admin, setAdmin] = useState({})
+  const { loggedInUser } = useContext(UserContext);
+  const [admin, setAdmin] = useState({});
 
-    const handleBlur = (e) => {
-        const newAdmin = { ...admin };
-        newAdmin[e.target.name] = e.target.value;
-        setAdmin(newAdmin)
-    }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+  const onSubmit = (data, e) => {
+    // console.log(data);
+    fetch("https://warm-springs-45915.herokuapp.com/setAdmin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((success) => {
+        if (success) {
+          alert("Admin Added successfully");
+          e.target.value = "";
+        }
+      });
+  };
 
-        fetch("https://warm-springs-45915.herokuapp.com/setAdmin", {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(admin)
-        })
-    }
-
-    return (
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col-md-3">
-                    <Sidebar></Sidebar>
-                </div>
-                <div className="col-md-9 mt-5">
-                    <div className="d-flex justify-content-between">
-                        <h2>Add admin</h2>
-                        <h4>{loggedInUser.name}</h4>
-                    </div>
-                    <form style={{ width: '60%' }} action="" onSubmit={handleSubmit}>
-                        <input required onBlur={handleBlur} type="email" name="email" id="" placeholder="admin@gamil.com" className="form-control mt-5" />
-                        <br />
-                        <input required onBlur={handleBlur} type="password" name="password" id="" placeholder="Your password" className="form-control mt-1" />
-                        <br />
-                        <button type="submit" className="btn-black">Submit</button>
-                    </form>
-                </div>
-            </div>
+  return (
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-md-3">
+          <Sidebar></Sidebar>
         </div>
-    );
+        <div className="col-md-9 mt-5">
+          <div className="d-flex justify-content-between">
+            <h2>Add admin</h2>
+            <h4>{loggedInUser.name}</h4>
+          </div>
+
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="form-group">
+              <label>Email</label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Enter Email ID"
+                {...register("email", { required: true })}
+              />
+              {errors.name && (
+                <span className="text-danger">This field is required</span>
+              )}
+            </div>
+            <div className="form-group">
+              <label>Password</label>
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Enter password"
+                {...register("password", { required: true })}
+              />
+              {errors.name && (
+                <span className="text-danger">This field is required</span>
+              )}
+            </div>
+            <button type="submit" className="btn btn-primary">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default MakeAdmin;

@@ -5,7 +5,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const Review = () => {
     const { loggedInUser } = useContext(UserContext)
     const [review, setReview] = useState({});
-    const [file, setFile] = useState(null);
+
 
     const handleBlur = (e) => {
         const newReview = { ...review };
@@ -13,15 +13,11 @@ const Review = () => {
         setReview(newReview);
     }
 
-    const handleFileChange = (e) => {
-        const newFile = e.target.files[0];
-        setFile(newFile);
-    }
 
     const handleReviewSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append('file', file);
+        // formData.append('file', file);
         formData.append('newFile', loggedInUser.photo);
         formData.append('name', loggedInUser.name);
         formData.append('designation', review.designation);
@@ -36,6 +32,7 @@ const Review = () => {
             })
 
     }
+
 
     return (
         <div className="container-fluid">
@@ -52,13 +49,7 @@ const Review = () => {
                         <br />
                         <input onBlur={handleBlur} type="text" placeholder="Description" className="form-control" name="description" />
                         <br />
-                        <div class="form-group">
-                            <h6 >Image Upload</h6>
-                            <div className='file-upload'>
-                                <input onChange={handleFileChange} type="file" />
-                                <p style={{ color: 'green', margin: '0', marginLeft: '5px' }}>Upload Image</p>
-                            </div>
-                        </div>
+   
 
                         <button type="submit" className="btn-black mt-4">Submit</button>
                     </form>

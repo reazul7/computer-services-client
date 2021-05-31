@@ -52,6 +52,9 @@ const Sidebar = () => {
               <li className="li-style">
                 <Link to="/mainAdmin">Make Admin</Link>
               </li>
+              <li className="li-style">
+                <Link to="/manageService">Manage Service</Link>
+              </li>
             </div>
           ) : (
             <div>
