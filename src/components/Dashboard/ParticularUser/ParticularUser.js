@@ -1,13 +1,15 @@
 import React from 'react';
 
 const ParticularUser = ({particularUser}) => {
+    console.log(particularUser);
     // const newImage = JSON.stringify(particularUser.image)
     return (
         <div className="col-lg-6 col-md-12 col-sm-12">
             <div className="card mb-3 w-100" style={{ width: "28rem", boxSizing: "border-box", padding: "20px" }}>
                 <div className="row">
                     <div className="col-md-7 offset-md-1">
-                        <img style={{ width: "150px", height: "150px" }} className="card-img-top align-self-center" src={`data:image/jpeg;base64,${particularUser?.serviceImg || ""}`} alt="" />
+                        <img style={{ width: "150px", height: "150px" }} className="card-img-top align-self-center" src={`data:image/jpeg;base64,${particularUser?.image || ""}`} alt="" />
+
                     </div>
                     <div className="col-md-4 w-50 my-3">
                         <button className="btn-black">{particularUser.status}</button>

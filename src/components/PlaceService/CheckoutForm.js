@@ -19,7 +19,8 @@ export default function CheckoutForm() {
 
   // finding clicked file from home page
   const newService = service.find((sv) => sv._id === id);
-  console.log(newService);
+  // console.log(newService);
+  // console.log(service);
 
   useEffect(() => {
     fetch("https://warm-springs-45915.herokuapp.com/seeService")
@@ -92,6 +93,7 @@ export default function CheckoutForm() {
       const formData = new FormData();
       formData.append("status", "pending");
       formData.append("service", newService.title);
+      formData.append("image", newService.image.img);
       formData.append("price", newService.price);
       formData.append("email", loggedInUser.email);
       formData.append("name", loggedInUser.name);
