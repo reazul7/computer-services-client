@@ -3,7 +3,7 @@
   <a href="https://computer-services-a2c45.web.app" target="_blank">Computer Services Lite Site</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
+  <img alt="Demo" src="./src/images/com-service-view.png" />
 </div>
 
 ## Hi there 👋, 
