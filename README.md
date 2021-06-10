@@ -1,9 +1,9 @@
 <h2 align="center">
   Computer Services Website<br/>
-  <a href="https://computer-services-a2c45.web.app" target="_blank">Computer Services Lite Site</a>
+  <a href="https://computer-services-a2c45.web.app" target="_blank">Lite Site</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="https://raw.githubusercontent.com/reazul7/egg-shop/master/src/components/images/view.png" />
+  <img src="./src/images/com-service-view.png" alt="Demo"/>
 </div>
 
 ## Hi there 👋, 
@@ -14,13 +14,16 @@
 I am always ready to work hard and it helps me learn faster. And I have good knowledge in Web Development with experience in building Web Applications used React.js for client-side, Node.js/Express.js for server-side, and MongoDB for the database.
 
 ## SKILLS:
-JavaScript, ES6, ReactJS, React-router, Node.js, Express.js, MongoDB, Firebase, Heroku, Netlify, Git, GitHub, npm, yarn, HTML5, CSS3,  Bootstrap, MaterialUI, Firebase
+<b>Expertise:</b> JavaScript, ReactJS, React Bootstrap, HTML, CSS, React-router
+<b>Comfortable:</b> ES6, Node.js, Express.js, MongoDB, Firebase, Heroku, Netlify, Tailwind CSS
+<b>Familiar:</b> React Native, MaterialUI, SASS, Redux, MySQL
+<b>Tools:</b> VS Code, GitHub, npm, yarn, XMAPP
+
 ## FAMILIAR WITH:
 TypeScript, React-Native, Redux, React-bootsrap, SASS, WordPress, C Language
 
 ## Built With
 This project was built using these technologies.
-
 - React.js
 - Node.js
 - Express.js
@@ -50,9 +53,9 @@ Clone down this repository. You will need `node.js` and `git` installed globally
 
 ## 🛠 Installation and Setup Instructions
 
-1. Installation: `npm install`
+1. Installation: `npm install` or `yarn`
 
-2. In the project directory, you can run: `npm start`
+2. In the project directory, you can run: `npm start` or `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
