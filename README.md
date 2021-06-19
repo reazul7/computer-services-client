@@ -1,6 +1,6 @@
 <h2 align="center">
   Computer Services Website<br/>
-  <a href="https://computer-services-a2c45.web.app" target="_blank">Lite Site</a>
+  <a href="https://computer-services-a2c45.web.app" target="_blank">Live Site</a>
 </h2>
 <div align="center">
   <img src="./src/images/com-service-view.png" alt="Demo"/>
