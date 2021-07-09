@@ -13,6 +13,7 @@ const ServiceDetails = ({service}) => {
               style={{ width: "150px", height: "100px"}}
               className="card-img-top align-self-center"
               src={`data:image/jpeg;base64,${service.image.img}`}
+              alt="img"
             />
             <div className="card-body text-center">
               <h5 className="card-title fw-bold">
