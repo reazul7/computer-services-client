@@ -11,10 +11,6 @@ import MessengerCustomerChat from "react-messenger-customer-chat";
 const Home = () => {
   return (
     <div>
-      <MessengerCustomerChat
-        pageId="105944268447512"
-        appId="957663201750674"
-      />
       <Header></Header>
       <Services></Services>
       <Sliders></Sliders>

@@ -20,15 +20,15 @@ export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
 
-  //login save
-  useEffect(() => {
-    const userData = localStorage.getItem("user");
-    if (!userData) {
-      return;
-    }
+  // login save
+  // useEffect(() => {
+  //   const userData = localStorage.getItem("user");
+  //   if (!userData) {
+  //     return;
+  //   }
 
-    setLoggedInUser(JSON.parse(userData));
-  }, []);
+  //   setLoggedInUser(JSON.parse(userData));
+  // }, []);
 
   return (
     <UserContext.Provider value={{ loggedInUser, setLoggedInUser }}>

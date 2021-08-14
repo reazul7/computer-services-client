@@ -36,7 +36,9 @@
     transform: rotate(360deg);
   }
 }
-
+.btn-navbar{
+  
+}
 .btn-black{
   padding: 5px 15px;
   border-radius: 3px;

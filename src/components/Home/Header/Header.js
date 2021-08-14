@@ -13,6 +13,14 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     const { loggedInUser, setLoggedInUser } = useContext(UserContext)
+
+    // const handleLogout = () => {
+    //     setLoggedInUser({})
+    //     sessionStorage.setItem('email', '')
+    //     sessionStorage.setItem('displayName', '')
+    //     sessionStorage.setItem('photoURL', '')
+    // }
+
     return (
         <header>
             <div className="header pb-4">
