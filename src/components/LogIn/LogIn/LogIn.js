@@ -28,7 +28,7 @@ const LogIn = () => {
                 var { displayName, email, photoURL } = result.user;
                 const signInUser = { name: displayName, email, photo: photoURL };
                 setLoggedInUser(signInUser);
-                // localStorage.setItem('user', JSON.stringify(signInUser));
+                localStorage.setItem('user', JSON.stringify(signInUser));
                 history.replace(from);
             }).catch((error) => {
                 var errorCode = error.code;
