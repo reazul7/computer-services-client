@@ -5,12 +5,12 @@ import Services from "../Services/Services";
 import Sliders from "../Sliders/Sliders";
 import FeedBack from "../FeedBack/FeedBack";
 import Contact from "../Contact/Contact";
-import ReactDOM from "react-dom";
-import MessengerCustomerChat from "react-messenger-customer-chat";
+import LiveChat from "../LiveChat/LiveChat";
 
 const Home = () => {
   return (
     <div>
+      <LiveChat/>
       <Header></Header>
       <Services></Services>
       <Sliders></Sliders>
