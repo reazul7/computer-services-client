@@ -25,6 +25,7 @@ const MakeAdmin = () => {
         if (success) {
           alert("Admin Added successfully");
           e.target.value = "";
+          e.target.reset();
         }
       });
   };
@@ -32,15 +33,14 @@ const MakeAdmin = () => {
   return (
     <div className="container-fluid">
       <div className="row">
+        <div className="text-center py-4 text-lg font-bold">
+          <h2>Add admin</h2>
+          <h4 className="text-blue-500 py-2">{loggedInUser.name}</h4>
+        </div>
         <div className="col-md-3">
           <Sidebar></Sidebar>
         </div>
-        <div className="col-md-9 mt-5">
-          <div className="d-flex justify-content-between">
-            <h2>Add admin</h2>
-            <h4>{loggedInUser.name}</h4>
-          </div>
-
+        <div className="col-md-9 mt-2">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-group">
               <label>Email</label>
