@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faGooglePlusG, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import FooterCol from '../FooterCol/FooterCol';
 
 const Footer = () => {
@@ -36,24 +36,25 @@ const Footer = () => {
     return (
         <footer className="footer-area clear-both">
             <div className="container pt-5">
-                <div className="row py-5">
+                <div className="row">
                     <FooterCol key={1} menuTitle={"."} menuItems={noNamed} />
                     <FooterCol key={2} menuTitle="Services" menuItems={services} />
                     <FooterCol key={3} menuTitle="Software" menuItems={software} />
                     <FooterCol key={4} menuTitle="Our Address" menuItems={ourAddress}>
                         <ul className="social-media list-inline">
-                            <li className="list-inline-item"><a href="//facebook.com"><FontAwesomeIcon className="icon active-icon" icon={faFacebookF} /></a></li>
-                            <li className="list-inline-item"><a href="//google.com"><FontAwesomeIcon className="icon" icon={faGooglePlusG} /></a></li>
-                            <li className="list-inline-item"><a href="//instagram.com"><FontAwesomeIcon className="icon" icon={faTwitter} /></a></li>
+                            <li className="list-inline-item"><a href="https://www.facebook.com/reazul.islam.1426876/"><FontAwesomeIcon className="icon active-icon" icon={faFacebookF} /></a></li>
+                            <li className="list-inline-item"><a href="mailto:reazul7777@gmail.com"><FontAwesomeIcon className="icon" icon={faGooglePlusG} /></a></li>
+                            <li className="list-inline-item"><a href="https://www.linkedin.com/in/reazul7/"><FontAwesomeIcon className="icon" icon={faLinkedinIn} /></a></li>
+                            <li className="list-inline-item"><a href="https://github.com/reazul7"><FontAwesomeIcon className="icon" icon={faGithub} /></a></li>
                         </ul>
                         <div className="mt-5">
-                            <h6>Call Now</h6>
-                            <button className="btn-black w-50">01521331127</button>
+                            <h6 className="my-2">Call Now</h6>
+                            <button className="btn-black w-50">+8801521331127</button>
                         </div>
                     </FooterCol>
                 </div>
-                <div className="copyRight text-center">
-                    <p>Copyright {(new Date()).getFullYear()} All Rights Reserved</p>
+                <div className="copyRight text-center py-3">
+                    <p>Copyright &copy; {(new Date()).getFullYear()} <a href="https://www.linkedin.com/in/reazul7/" className="text-blue-500">Reazul.</a> All Rights Reserved</p>
                 </div>
             </div>
         </footer>

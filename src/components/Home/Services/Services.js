@@ -15,6 +15,13 @@ const Services = () => {
                 <h3 className="text-center text-2xl fw-bold">Our <span className="text-blue-500">Services</span></h3>
             </div>
             <div className="mx-auto grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-center">
+                {service.length === 0 && (
+                    <div className="text-center">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                )}
                 {
                     service.map(service => <ServiceDetails service={service} key={service._id}></ServiceDetails>)
                 }

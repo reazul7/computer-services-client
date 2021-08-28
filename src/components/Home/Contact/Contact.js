@@ -20,9 +20,9 @@ const Contact = () => {
         <div className="contact" id="contact">
             <div className="container pb-5 mb-5">
                 <div className="row">
-                <h3 className="text-center text-2xl fw-bold pb-4"><span style={{color: '#E45E53'}}>Contact</span> With US</h3>
+                <h3 className="text-center text-2xl fw-bold py-4"><span style={{color: '#E45E53'}}>Contact</span> With US</h3>
                     <div className="col-md-6 pb-4 align-item center">
-                        <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore sunt vero dolore, quam voluptas dolores!</small></p>
+                        <img src="https://thumbs.gfycat.com/BlaringWeightyCollie-max-1mb.gif" alt="" />
                     </div>
 
                     <div className="col-md-6">
@@ -31,7 +31,7 @@ const Contact = () => {
                                 <div className="col-12 form-group mx-auto">
                                     <input type="text" name="name" placeholder="Name" id="" className="form-control"/>
                                 </div>
-                                <div className="col-12 form-group mx-auto pt-2">
+                                <div className="col-12 form-group mx-auto">
                                     <input type="email" name="email" placeholder="Email Address" id="" className="form-control"/>
                                 </div>
                                 <div className="col-12 form-group mx-auto">

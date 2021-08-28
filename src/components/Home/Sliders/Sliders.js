@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
-import './Sliders.css';
 import 'react-multi-carousel/lib/styles.css';
+import './Sliders.css';
 import workshop1 from '../../../images/center1.jpg';
 import workshop2 from '../../../images/center2.jpg';
 import workshop3 from '../../../images/center3.jpg';

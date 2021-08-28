@@ -43,28 +43,40 @@ const LogIn = () => {
   };
   return (
     <div className="mt-5 pt-5">
-      <Link
-        to="/"
-        style={{ textAlign: "center", color: "black" }}
-        class="navbar-brand d-sm-block mt-5 pt-5"
-        href="#"
-      >
-        <div className="flex justify-center">
-            <img style={{ width: "50px" }} src={logo} alt="" />
-        </div>
-         Computer Services
-      </Link>
-      <div>
-        <div className="gButton bg-gray-200 rounded-full shadow-none mt-4">
-          <img
-            style={{ width: "25px" }}
-            className="ms-3"
-            src={googleIcon}
-            alt=""
-          />
-          <button className="googleButton" onClick={handleGoogleSignIn}>
-            Continue with Google
-          </button>
+      <div className="container mt-5 pt-5">
+        <div className="row">
+          {/* gif-area */}
+          <div className="col-md-6 flex justify-center">
+            <img src="https://c.tenor.com/cdu8MIU0Mq0AAAAM/android-google-happy-google.gif" alt="" />
+          </div>
+
+          {/* login area */}
+          <div className="col-md-6 text-center">
+            <Link
+              to="/"
+              style={{ textAlign: "center", color: "black" }}
+              class="navbar-brand d-sm-block mt-5"
+              href="#"
+            >
+              <div className="flex justify-center">
+                  <img style={{ width: "50px" }} src={logo} alt="" />
+              </div>
+              Computer Services
+            </Link>
+            <div>
+              <div className="gButton bg-gray-200 rounded-full shadow-none mt-4">
+                <img
+                  style={{ width: "25px" }}
+                  className="ms-3"
+                  src={googleIcon}
+                  alt=""
+                />
+                <button className="googleButton" onClick={handleGoogleSignIn}>
+                  Continue with Google
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
