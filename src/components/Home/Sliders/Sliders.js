@@ -33,7 +33,7 @@ const Sliders = () => {
     return (
         <section className="slider text-white py-5">
             <div className="container">
-                <h3 className="text-center fw-bold">Our <span className="txt-color">Labrador</span> Picture</h3>
+                <h3 className="text-center text-2xl fw-bold">Our <span className="txt-color">Labrador</span> Picture</h3>
                 <div className="row">
                     <div className="col-12">
                         <Carousel
@@ -47,7 +47,7 @@ const Sliders = () => {
                             autoPlaySpeed={2000}
                             keyBoardControl={true}
                             customTransition="all 1s linear"
-                            transitionDuration={1000}
+                            transitionDuration={3000}
                             containerClass="carousel-container"
                             removeArrowOnDeviceType={["tablet", "mobile"]}
                             dotListClass="custom-dot-list-style"

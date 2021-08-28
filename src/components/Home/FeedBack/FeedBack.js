@@ -14,7 +14,7 @@ const FeedBack = () => {
     return (
         <div className="container my-5">
             <div className="row">
-                <h3 className="text-center fw-bold">Client <span className="txt-color">Feedback</span></h3>
+                <h3 className="text-center text-2xl fw-bold">Client <span className="text-blue-500">Feedback</span></h3>
             </div>
             <div className="d-flex row justify-content-center">
                 {
