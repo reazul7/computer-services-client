@@ -41,7 +41,7 @@ const Review = () => {
                     <Sidebar></Sidebar>
                 </div>
                 <div className="col-md-9">
-                    <h4 className="my-5">Order Review</h4>
+                    <h4 className="my-5 text-3xl text-gray-800">Order Review</h4>
                     <form action="" onSubmit={handleReviewSubmit}>
                         {loggedInUser.name && <input onBlur={handleBlur} type="text" placeholder="Your name" className="form-control" value={loggedInUser.name} name="name" />}
                         <br />

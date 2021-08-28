@@ -41,7 +41,7 @@ const ManageService = () => {
               <tr>
                 <th>Sr No</th>
                 <th>Sr Id</th>
-                <th>Name</th>
+                <th>Service Name</th>
                 <th>Price</th>
                 <th>Action</th>
               </tr>

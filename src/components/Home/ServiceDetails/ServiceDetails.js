@@ -1,32 +1,47 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Flip from 'react-reveal/Flip';
+import React from "react";
+import { Link } from "react-router-dom";
+import Flip from "react-reveal/Flip";
+import { BsStarFill, BsStarHalf } from "react-icons/bs";
 
+const ServiceDetails = ({ service }) => {
+  const { _id, email, image, title, description, price } = service;
 
-const ServiceDetails = ({service}) => {
-    return (
-        <div style={{width: "250px", height: "250px" }} className="col-md-4 col-sm-6 my-3 d-flex justify-content-center">
-            <Link to={`/placeService/${service._id}`}>
-            <Flip>
-            <div className="card card-style">
+  return (
+    <div className="m-2 border-gray-800 bg-gray-100 relative text-center card-container">
+      <Link to={`/placeService/${_id}`}>
+        <Flip>
+          <div className="pt-1">
             <img
-              style={{ width: "150px", height: "100px"}}
-              className="card-img-top align-self-center"
-              src={`data:image/jpeg;base64,${service.image.img}`}
-              alt="img"
+              className="w-10/12 h-60 m-auto object-contain"
+              src={`data:image/jpeg;base64,${image.img}`}
+              alt="service-img"
             />
-            <div className="card-body text-center">
-              <h5 className="card-title fw-bold">
-              {service.title}
-              </h5>
-              <p className="card-text text-dark">{service.description}</p>
-              <h5 className="text-light bg-secondary w-50" style={{margin: "0 auto"}}>{service.price}</h5>
+          </div>
+
+          <div class="pb-2">
+            <p class="title text-lg font-bold block cursor-pointer text-gray-500 hover:text-yellow-500">
+              {title}
+            </p>
+
+            <p class="title text-base block capitalize cursor-pointer text-gray-500 hover:text-yellow-500">
+              {description.slice(0, 50)}
+            </p>
+
+            <p class="text-gray-900 rounded text-lg font-bold">${price}</p>
+
+            <p class="star flex text-yellow-400 justify-content-center">
+              <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill />{" "}
+              <BsStarHalf />
+            </p>
+
+            <div className="p-2 flex justify-center"> 
+              <button className="rounded bg-blue-500 w-8/12">Buy this Service</button>
             </div>
           </div>
-            </Flip>
-            </Link>
-        </div>
-    );
+        </Flip>
+      </Link>
+    </div>
+  );
 };
 
 export default ServiceDetails;

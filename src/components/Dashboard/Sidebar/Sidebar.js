@@ -29,7 +29,7 @@ const Sidebar = () => {
   return (
     <div>
       <Link to="/">
-        <div className="text-center mt-5">
+        <div className="text-center mt-5 pl-5">
           <img
             style={{ height: "50px" }}
             src={logo}
@@ -70,7 +70,7 @@ const Sidebar = () => {
             </div>
           )}
         </ul>
-        <div>
+        <div className="py-2">
           <Link to="/" className="btn-black">
             Home
           </Link>

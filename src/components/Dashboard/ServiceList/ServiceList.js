@@ -67,7 +67,7 @@ const ServiceList = () => {
                                         <td>{showData.name}</td>
                                         <td>{showData.email}</td>
                                         <td>{showData.service}</td>
-                                        <td>{showData.description}</td>
+                                        <td>{showData.description.slice(0,40)}</td>
                                         <td>
                                             <div className="dropdown">
                                                 <button className="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">

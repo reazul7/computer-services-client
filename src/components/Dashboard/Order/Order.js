@@ -9,7 +9,9 @@ const Order = () => {
                     <span></span>
                 </div>
                 <div className="col-md-9">
-                    <PlaceService></PlaceService>
+                    <div className="mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                        <PlaceService/>
+                    </div>
                 </div>
             </div>
         </div>
