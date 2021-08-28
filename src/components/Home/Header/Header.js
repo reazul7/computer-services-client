@@ -58,9 +58,9 @@ const Header = () => {
                     </Link>
                   </li>
                   <li class="nav-item">
-                    <Link className="nav-link fw-bold" to="#contact">
+                    <a className="nav-link fw-bold" href="#contact">
                       Contact Us
-                    </Link>
+                    </a>
                   </li>
                   {loggedInUser.name ? (
                     <h5 className="p-2">{loggedInUser.name}</h5>
