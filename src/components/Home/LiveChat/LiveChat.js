@@ -5,7 +5,7 @@ const LiveChat = () => {
   return (
     <div>
       <MessengerCustomerChat 
-        pageId="105944268447512" 
+        pageId="101370648951799" 
         appId="957663201750674" 
       />
     </div>
