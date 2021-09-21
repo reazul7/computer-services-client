@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import logo from "../../../images/logo-com-service.svg";
+import React from "react";
 import banner from "../../../images/pc-services-home-banner.png";
 import apple from "../../../images/apple.png";
 import asus from "../../../images/asus.png";
@@ -8,11 +7,9 @@ import hp from "../../../images/hp.png";
 import lenevo from "../../../images/lenevo.png";
 import razer from "../../../images/razer.png";
 import "./Header.css";
-import { UserContext } from "../../../App";
-import { Link } from "react-router-dom";
+import NavBar from "../NavBar/NavBar";
 
 const Header = () => {
-  const { loggedInUser, setLoggedInUser } = useContext(UserContext);
 
   // const handleLogout = () => {
   //     setLoggedInUser({})
@@ -25,54 +22,7 @@ const Header = () => {
     <header>
       <div className="header pb-4">
         <div className="container">
-          <nav className="navbar navbar-expand-md navbar-light row ms-auto">
-            <div className="col-md-4">
-              <Link class="navbar-brand d-none d-sm-block" href="/">
-                <img style={{ width: "50px" }} src={logo} alt="" /> 
-                Computer Services
-              </Link>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-
-            <div className="col-md-8">
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
-                  <li class="nav-item active">
-                    <Link className="nav-link fw-bold" to="">
-                      Home
-                    </Link>
-                  </li>
-                  <li class="nav-item">
-                    <Link className="nav-link fw-bold" to="dashboard">
-                      Dashboard
-                    </Link>
-                  </li>
-                  <li class="nav-item">
-                    <a className="nav-link fw-bold" href="#contact">
-                      Contact Us
-                    </a>
-                  </li>
-                  {loggedInUser.name ? (
-                    <h5 className="p-2">{loggedInUser.name}</h5>
-                  ) : (
-                    <Link to="/login" className="mx-auto">
-                      <button className="btn-black ml-3">LogIn</button>
-                    </Link>
-                  )}
-                </ul>
-              </div>
-            </div>
-          </nav>
+          <NavBar />
         </div>
 
         <div className="container mt-4">
