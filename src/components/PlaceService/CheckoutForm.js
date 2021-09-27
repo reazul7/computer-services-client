@@ -35,7 +35,7 @@ export default function CheckoutForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({items: [{ id }]})
+        body: JSON.stringify({ items: [{ id }] }),
       })
       .then((res) => {
         return res.json();
@@ -62,7 +62,6 @@ export default function CheckoutForm() {
       },
     },
   };
-
 
   const handleChange = async (event) => {
     // Listen for changes in the CardElement
@@ -114,9 +113,14 @@ export default function CheckoutForm() {
     <form id="payment-form" onSubmit={handleSubmit} className="shadow-2xl">
       {newService && (
         <div className="bg-gray-100 p-2 rounded-lg text-center">
-          <h2 className="text-xl font-semibold pb-2">Service Name: <span className="font-bold pl-2">{newService.title}</span></h2>
+          <h2 className="text-xl font-semibold pb-2">
+            Service Name:{" "}
+            <span className="font-bold pl-2">{newService.title}</span>
+          </h2>
           <p className="text-justify py-2">{newService.description}</p>
-          <p className="bg-blue-300 px-4 py-2 mx-auto w-4/12 font-semibold rounded-lg">Price: {newService.price}</p>
+          <p className="bg-blue-300 px-4 py-2 mx-auto w-4/12 font-semibold rounded-lg">
+            Price: {newService.price}
+          </p>
         </div>
       )}
       <br />

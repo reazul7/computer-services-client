@@ -37,12 +37,12 @@ const Review = () => {
     return (
         <div className="container-fluid">
             <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-2 bg-gray-200 h-screen">
                     <Sidebar></Sidebar>
                 </div>
-                <div className="col-md-9">
-                    <h4 className="my-5 text-3xl text-gray-800">Order Review</h4>
-                    <form action="" onSubmit={handleReviewSubmit}>
+                <div className="col-md-10 text-center">
+                    <h4 className="pt-5 pb-3 text-3xl text-black font-semibold">Order Review</h4>
+                    <form action="" onSubmit={handleReviewSubmit} className="mx-auto">
                         {loggedInUser.name && <input onBlur={handleBlur} type="text" placeholder="Your name" className="form-control" value={loggedInUser.name} name="name" />}
                         <br />
                         <input onBlur={handleBlur} type="text" placeholder="Company’s name, Your Designation" className="form-control" name="designation" />
