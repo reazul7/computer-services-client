@@ -2,7 +2,6 @@ import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../../App";
 import logo from "../../../images/logo-com-service.svg";
-import "./Sidebar.css";
 
 const Sidebar = () => {
   const { loggedInUser, setLoggedInUser } = useContext(UserContext);
@@ -13,7 +12,6 @@ const Sidebar = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data) {
           const newUser = { ...loggedInUser };
           newUser.setUser = true;
@@ -23,7 +21,7 @@ const Sidebar = () => {
           newUser.setUser = false;
           setLoggedInUser(newUser);
         }
-      });
+      })
   }, []);
 
   return (
@@ -39,36 +37,39 @@ const Sidebar = () => {
         </Link>
       </div>
 
-      <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4">
+      <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-4 px-4">
         <ul className="list-unstyled">
           {loggedInUser.setUser ? (
-            <div className="my-5">
-              <li className="li-style">
+            <div className="w-40">
+              <li>
                 <Link to="/serviceList">Service list admin</Link>
               </li>
-              <li className="li-style">
+              <li>
                 <Link to="/addService">Add Service</Link>
               </li>
-              <li className="li-style">
+              <li>
                 <Link to="/mainAdmin">Make Admin</Link>
               </li>
-              <li className="li-style">
+              <li>
                 <Link to="/manageService">Manage Service</Link>
               </li>
             </div>
           ) : (
-            <div>
-              <li className="li-style font-semibold">
+            <div className="w-40 ">
+              <li className="font-semibold">
+                <Link to="/dashboard">User Dashboard</Link>
+              </li>
+              <li className="font-semibold">
                 <Link to="/serviceListO">Service list user</Link>
               </li>
-              <li className="li-style font-semibold">
+              <li className="font-semibold">
                 <Link to="/review">Review</Link>
               </li>
             </div>
           )}
         </ul>
-        <div className="py-2">
-          <Link to="/" className="btn-black">
+        <div className="py-2 font-semibold">
+          <Link to="/" className="btn-black hover:text-white">
             Home
           </Link>
         </div>

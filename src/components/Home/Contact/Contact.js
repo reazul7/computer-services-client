@@ -1,4 +1,3 @@
-import React from 'react';
 import './Contact.css';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2'

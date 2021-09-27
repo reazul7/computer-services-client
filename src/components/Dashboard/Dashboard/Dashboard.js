@@ -6,16 +6,17 @@ import Sidebar from "../Sidebar/Sidebar";
 const Dashboard = () => {
   const { loggedInUser } = useContext(UserContext);
   return (
-    <div>
+    <div className="container-fluid">
       <div className="row">
-        <div className="col-md-2 bg-gray-200 h-screen">
+        <div className="col-md-3 bg-gray-200 md:h-screen h-full">
           <Sidebar></Sidebar>
         </div>
 
-        {/* Dashboard Header */}
+        <div className="col-md-9 text-center">
+          {/* Dashboard Header */}
         {loggedInUser.setUser ? (
-          <>
-            <div className="col-md-10 my-5">
+          
+            <div className="my-5">
               <h3 className="text-center text-xl">
                 Welcome to{" "}
                 <span className="font-bold text-green-600"> Admin </span>{" "}
@@ -29,9 +30,9 @@ const Dashboard = () => {
                 </span>{" "}
               </h3>
             </div>
-          </>
+          
         ) : (
-          <div className="col-md-10">
+          <div>
             <div className="my-5">
               <h3 className="text-center text-xl">
                 Welcome to User Dashboard
@@ -53,6 +54,7 @@ const Dashboard = () => {
             </div>
           </div>
         )}
+        </div>
       </div>
     </div>
   );
