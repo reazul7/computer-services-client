@@ -1,10 +1,17 @@
 import React, { useContext } from "react";
 import logo from "../../../images/logo-com-service.svg";
 import { UserContext } from "../../../App";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const NavBar = () => {
   const { loggedInUser, setLoggedInUser } = useContext(UserContext);
+
+  let history = useHistory(); 
+
+  const handleSignOut = () => {
+    setLoggedInUser({});
+    history.push("/");
+  }
   return (
     <nav className="navbar navbar-expand-md navbar-light row ms-auto">
       <div className="col-md-4 text-center">
@@ -28,31 +35,33 @@ const NavBar = () => {
       <div className="col-md-8">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
-            <li class="nav-item active">
-              <Link className="nav-link fw-bold" to="">
+            <li class="nav-item active px-1">
+              <Link className="nav-link fw-bold hover:bg-blue-300 rounded hover:shadow-xl" to="">
                 Home
               </Link>
             </li>
-            <li class="nav-item">
-              <Link className="nav-link fw-bold" to="/dashboard">
+            <li class="nav-item px-1">
+              <Link className="nav-link fw-bold hover:bg-blue-300 rounded hover:shadow-xl" to="/dashboard">
                 Dashboard
               </Link>
             </li>
-            <li class="nav-item">
-              <a className="nav-link fw-bold" href="#contact">
+            <li class="nav-item px-1">
+              <a className="nav-link fw-bold hover:bg-blue-300 rounded hover:shadow-xl" href="#contact">
                 Contact Us
               </a>
             </li>
-            <li class="nav-item">
-              <a className="nav-link fw-bold" href="#feedback">
-                FeedBack
+            <li class="nav-item px-1">
+              <a className="nav-link fw-bold hover:bg-blue-300 rounded hover:shadow-xl" href="#feedback">
+                Feed Back
               </a>
             </li>
             {loggedInUser.name ? (
-              <h5 className="p-2">{loggedInUser.name}</h5>
+              <Link to="/" className="nav-item">
+                <button onClick={handleSignOut} className="nav-link fw-bold bg-blue-300 hover:bg-blue-300 rounded hover:shadow-xl">Signout</button>
+              </Link>
             ) : (
-              <Link to="/login" className="mx-auto">
-                <button className="btn-black ml-3">LogIn</button>
+              <Link to="/login" className="nav-item">
+                <button className="nav-link fw-bold bg-blue-300 hover:bg-blue-300 rounded hover:shadow-xl">Signin</button>
               </Link>
             )}
           </ul>

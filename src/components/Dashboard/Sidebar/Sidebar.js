@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../../App";
 import logo from "../../../images/logo-com-service.svg";
@@ -28,16 +28,16 @@ const Sidebar = () => {
 
   return (
     <div>
-      <Link to="/">
-        <div className="text-center mt-5 pl-5">
+      <div className="mt-5 pl-5">
+        <Link to="/">
           <img
             style={{ height: "50px" }}
             src={logo}
             className="img-fluid"
             alt=""
           />
-        </div>
-      </Link>
+        </Link>
+      </div>
 
       <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4">
         <ul className="list-unstyled">
@@ -58,13 +58,10 @@ const Sidebar = () => {
             </div>
           ) : (
             <div>
-              <li className="li-style">
-                <Link to="/placeService/:id">Order</Link>
-              </li>
-              <li className="li-style">
+              <li className="li-style font-semibold">
                 <Link to="/serviceListO">Service list user</Link>
               </li>
-              <li className="li-style">
+              <li className="li-style font-semibold">
                 <Link to="/review">Review</Link>
               </li>
             </div>

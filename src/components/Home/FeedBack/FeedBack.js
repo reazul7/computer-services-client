@@ -58,6 +58,13 @@ const FeedBack = () => {
           itemClass="carousel-item-padding-40-px"
           className="py-5"
         >
+          {newFeedback.length === 0 && (
+                    <div className="text-center">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                )}
           {newFeedback.map((feedback) => (
             <FeedBackDetails
               key={feedback._id}

@@ -36,7 +36,9 @@ const Header = () => {
               <p className="pb-3 text-lg">
                 Best computer service provider in your town
               </p>
-              <button className="btn-black w-25">Hire us</button>
+              <a href="https://www.linkedin.com/in/reazul7/" target="_blank">
+                <button className="btn-black w-25">Hire us</button>
+              </a>
             </div>
             <div className="col-md-6 align-self-center">
               <img className="img-fluid" src={banner} alt="" />

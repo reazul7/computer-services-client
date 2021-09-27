@@ -14,7 +14,7 @@ const Footer = () => {
         { name: "Home support", link: "/services" },
     ]
     const ourAddress = [
-        { name: "New Poltan - Dhaka", link: "//google.com/map" },
+        { name: "Jatrabari - Dhaka", link: "//google.com/map" },
         { name: "Bangladesh", link: "//google.com/map" },
 
     ]
@@ -37,15 +37,15 @@ const Footer = () => {
         <footer className="footer-area clear-both">
             <div className="container pt-5">
                 <div className="row">
-                    <FooterCol key={1} menuTitle={"."} menuItems={noNamed} />
+                    <FooterCol key={1} menuTitle={"Works with"} menuItems={noNamed} />
                     <FooterCol key={2} menuTitle="Services" menuItems={services} />
                     <FooterCol key={3} menuTitle="Software" menuItems={software} />
                     <FooterCol key={4} menuTitle="Our Address" menuItems={ourAddress}>
                         <ul className="social-media list-inline">
-                            <li className="list-inline-item"><a href="https://www.facebook.com/reazul.islam.1426876/"><FontAwesomeIcon className="icon active-icon" icon={faFacebookF} /></a></li>
-                            <li className="list-inline-item"><a href="mailto:reazul7777@gmail.com"><FontAwesomeIcon className="icon" icon={faGooglePlusG} /></a></li>
-                            <li className="list-inline-item"><a href="https://www.linkedin.com/in/reazul7/"><FontAwesomeIcon className="icon" icon={faLinkedinIn} /></a></li>
-                            <li className="list-inline-item"><a href="https://github.com/reazul7"><FontAwesomeIcon className="icon" icon={faGithub} /></a></li>
+                            <li className="list-inline-item"><a href="https://www.facebook.com/reazul.islam.1426876/" target="_blank"><FontAwesomeIcon className="icon active-icon" icon={faFacebookF} /></a></li>
+                            <li className="list-inline-item"><a href="mailto:reazul7777@gmail.com" target="_blank"><FontAwesomeIcon className="icon" icon={faGooglePlusG} /></a></li>
+                            <li className="list-inline-item"><a href="https://www.linkedin.com/in/reazul7/" target="_blank"><FontAwesomeIcon className="icon" icon={faLinkedinIn} /></a></li>
+                            <li className="list-inline-item"><a href="https://github.com/reazul7" target="_blank"><FontAwesomeIcon className="icon" icon={faGithub} /></a></li>
                         </ul>
                         <div className="mt-5">
                             <h6 className="my-2">Call Now</h6>
@@ -54,7 +54,7 @@ const Footer = () => {
                     </FooterCol>
                 </div>
                 <div className="copyRight text-center py-3">
-                    <p>Copyright &copy; {(new Date()).getFullYear()} <a href="https://www.linkedin.com/in/reazul7/" className="text-blue-500">Reazul.</a> All Rights Reserved</p>
+                    <p>Copyright &copy; {(new Date()).getFullYear()} <a href="https://www.linkedin.com/in/reazul7/" className="text-blue-400 font-bold">Reazul.</a> All Rights Reserved</p>
                 </div>
             </div>
         </footer>

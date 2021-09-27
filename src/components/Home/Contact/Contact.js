@@ -1,6 +1,7 @@
 import React from 'react';
 import './Contact.css';
 import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2'
 
 const Contact = () => {
     function sendEmail(e) {
@@ -8,10 +9,15 @@ const Contact = () => {
 
     emailjs.sendForm('service_7zdiv3p', 'template_taps7jq', e.target, 'user_PsmRntaXM3mRIYeOJL9bk')
       .then((result) => {
-          console.log(result.text);
-          alert("Email Send Successfully")
+        //   console.log(result.text);
+          Swal.fire({
+            icon: 'success',
+            title: 'Your email has been sent',
+            showConfirmButton: false,
+            timer: 2000
+          })
       }, (error) => {
-          console.log(error.text);
+        //   console.log(error.text);
       });
       e.target.reset()
     }
@@ -29,16 +35,16 @@ const Contact = () => {
                         <form onSubmit={sendEmail} className="w-full">
                             <div className="row m-auto">
                                 <div className="col-12 form-group mx-auto">
-                                    <input type="text" name="name" placeholder="Name" id="" className="form-control"/>
+                                    <input type="text" name="name" placeholder="Name" id="" className="form-control" required/>
                                 </div>
                                 <div className="col-12 form-group mx-auto">
-                                    <input type="email" name="email" placeholder="Email Address" id="" className="form-control"/>
+                                    <input type="email" name="email" placeholder="Email Address" id="" className="form-control" required/>
                                 </div>
                                 <div className="col-12 form-group mx-auto">
-                                    <input type="text" name="subject" placeholder="Subject" id="" className="form-control"/>
+                                    <input type="text" name="subject" placeholder="Subject" id="" className="form-control" required/>
                                 </div>
                                 <div className="col-12 form-group mx-auto">
-                                    <textarea cols="30" rows="8" name="message" placeholder="Your Message" id="" className="form-control"/>
+                                    <textarea cols="30" rows="8" name="message" placeholder="Your Message" id="" className="form-control" required/>
                                 </div>
                                 <div className="col-12 form-group mx-auto py-2">
                                     <input type="submit"  id="" className="btn-black" value="Send Mail "/>
