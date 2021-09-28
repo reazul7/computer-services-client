@@ -15,11 +15,11 @@ const Review = () => {
   const handleReviewSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
-    // formData.append('file', file);
     formData.append("newFile", loggedInUser.photo);
     formData.append("name", loggedInUser.name);
     formData.append("designation", review.designation);
     formData.append("description", review.description);
+    console.log(loggedInUser.photo, loggedInUser.name, review.designation, review.description);
     fetch("https://warm-springs-45915.herokuapp.com/review", {
       method: "POST",
       body: formData,

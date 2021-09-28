@@ -49,7 +49,7 @@ function App() {
           <PrivateRoute path="/placeService/:id">
             <PlaceService></PlaceService>
           </PrivateRoute>
-          <Route path="/serviceListO">
+          <Route path="/user-service-list">
             <UserService></UserService>
           </Route>
           <Route path="/serviceList">

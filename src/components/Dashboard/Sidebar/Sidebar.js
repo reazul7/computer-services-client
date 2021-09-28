@@ -60,7 +60,7 @@ const Sidebar = () => {
                 <Link to="/dashboard">User Dashboard</Link>
               </li>
               <li className="font-semibold">
-                <Link to="/serviceListO">Service list user</Link>
+                <Link to="/user-service-list">Service list user</Link>
               </li>
               <li className="font-semibold">
                 <Link to="/review">Review</Link>

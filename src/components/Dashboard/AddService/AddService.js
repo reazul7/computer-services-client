@@ -12,7 +12,7 @@ const AddService = () => {
         formData.append('title', adminInfo.title);
         formData.append('description', adminInfo.description);
         formData.append('price', adminInfo.price);
-        fetch('https://warm-springs-45915.herokuapp.com/addAdmin', {
+        fetch('https://warm-springs-45915.herokuapp.com/addService', {
             method: 'POST',
             body: formData
         })
