@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../../../App";
 import Sidebar from "../Sidebar/Sidebar";
+import Swal from 'sweetalert2'
 
 const Review = () => {
   const { loggedInUser } = useContext(UserContext);
@@ -26,18 +27,24 @@ const Review = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        alert("Review data has been send");
+        Swal.fire({
+          icon: 'success',
+          title: 'Thanks, for your important review',
+          showConfirmButton: false,
+          timer: 2000
+        })
+        e.target.reset();
       });
   };
 
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-md-3 bg-gray-200 md:h-screen h-full">
+        <div className="col-md-3 col-lg-2 bg-gray-200 md:h-screen h-full">
           <Sidebar></Sidebar>
         </div>
 
-        <div className="col-md-9 text-center">
+        <div className="col-md-9 col-lg-10 text-center">
           <h4 className="pt-5 pb-3 text-3xl text-black font-semibold">
             Order Review
           </h4>

@@ -20,10 +20,10 @@ const UserService = () => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-md-3 bg-gray-200 md:h-screen h-full">
+        <div className="col-md-3 col-lg-2 bg-gray-200 md:h-screen h-full">
           <Sidebar></Sidebar>
         </div>
-        <div className="col-md-9 text-center">
+        <div className="col-md-9 col-lg-10 text-center">
           <div className="pt-5 pb-3 text-center justify-content-around font-bold">
             <h2 className="text-xl">
               <span className="text-blue-700">{loggedInUser.name}</span>'s all
