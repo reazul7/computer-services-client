@@ -41,34 +41,34 @@ const Sidebar = () => {
         <ul className="list-unstyled">
           {loggedInUser.setUser ? (
             <div className="w-40">
-              <li>
-                <Link to="/serviceList">Service list admin</Link>
+              <li className="font-bold py-2 text-lg">
+                <Link to="/serviceList">All Services Status</Link>
               </li>
-              <li>
+              <li className="font-bold py-2 text-lg">
                 <Link to="/addService">Add Service</Link>
               </li>
-              <li>
+              <li className="font-bold py-2 text-lg">
                 <Link to="/mainAdmin">Make Admin</Link>
               </li>
-              <li>
+              <li className="font-bold py-2 text-lg">
                 <Link to="/manageService">Manage Service</Link>
               </li>
             </div>
           ) : (
             <div className="w-40 ">
-              <li className="font-semibold">
+              <li className="font-bold py-2 text-lg">
                 <Link to="/dashboard">User Dashboard</Link>
               </li>
-              <li className="font-semibold">
+              <li className="font-bold py-2 text-lg">
                 <Link to="/user-service-list">Service list user</Link>
               </li>
-              <li className="font-semibold">
+              <li className="font-bold py-2 text-lg">
                 <Link to="/review">Review</Link>
               </li>
             </div>
           )}
         </ul>
-        <div className="py-2 font-semibold">
+        <div className="py-2 font-bold py-2 text-lg">
           <Link to="/" className="btn-black hover:text-white">
             Home
           </Link>
