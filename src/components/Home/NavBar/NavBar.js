@@ -71,14 +71,14 @@ const NavBar = () => {
               <Link to="/" className="nav-item">
                 <button
                   onClick={handleSignOut}
-                  className="nav-link fw-bold bg-blue-300 hover:bg-blue-300 rounded hover:shadow-xl"
+                  className="nav-link fw-bold bg-black text-white rounded hover:shadow-xl"
                 >
                   Signout
                 </button>
               </Link>
             ) : (
               <Link to="/login" className="nav-item">
-                <button className="nav-link fw-bold bg-blue-300 hover:bg-blue-300 rounded hover:shadow-xl">
+                <button className="nav-link fw-bold bg-black text-white rounded hover:shadow-xl">
                   Signin
                 </button>
               </Link>

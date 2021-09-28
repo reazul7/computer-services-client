@@ -6,11 +6,11 @@ const ServiceDetails = ({ service }) => {
   const { _id, image, title, description, price } = service;
 
   return (
-    <div className="m-2 border-gray-800 bg-gray-100 relative text-center card-container">
+    <div className="m-2 border-gray-800 bg-gray-100 relative text-center card-container rounded shadow">
       <Flip>
         <div className="pt-1">
           <img
-            className="w-10/12 h-60 m-auto object-contain"
+            className="w-10/12 h-60 m-auto object-contain rounded-lg"
             src={`data:image/jpeg;base64,${image.img}`}
             alt="service-img"
           />
@@ -29,12 +29,12 @@ const ServiceDetails = ({ service }) => {
 
           <p class="star flex text-yellow-400 justify-content-center">
             <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill />{" "}
-            <BsStarHalf />
+            <BsStarFill />
           </p>
           <Link to={`/placeService/${_id}`}>
             <div className="p-2 flex justify-center">
-              <button className="rounded bg-blue-400 w-8/12">
-                Buy this Service
+              <button className="rounded bg-blue-400 w-8/12 mb-1">
+                Buy Now
               </button>
             </div>
           </Link>
