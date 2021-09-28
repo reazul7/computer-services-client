@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { UserContext } from "../../App";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import "./stripe.css";
+import Swal from 'sweetalert2'
 
 export default function CheckoutForm() {
   const [succeeded, setSucceeded] = useState(false);
@@ -103,22 +104,27 @@ export default function CheckoutForm() {
       })
         .then((res) => res.json())
         .then((result) => {
-          alert("Data has been send");
+          Swal.fire({
+            icon: 'success',
+            title: 'Thanks, for purchase',
+            showConfirmButton: false,
+            timer: 2000
+          })
         })
         .catch((err) => console.log(err));
     }
   };
 
   return (
-    <form id="payment-form" onSubmit={handleSubmit} className="shadow-2xl">
+    <form id="payment-form" onSubmit={handleSubmit} className="shadow-2xl mx-auto">
       {newService && (
         <div className="bg-gray-100 p-2 rounded-lg text-center">
           <h2 className="text-xl font-semibold pb-2">
             Service Name:{" "}
             <span className="font-bold pl-2">{newService.title}</span>
           </h2>
-          <p className="text-justify py-2">{newService.description}</p>
-          <p className="bg-blue-300 px-4 py-2 mx-auto w-4/12 font-semibold rounded-lg">
+          <p className="py-2 mb-2 text-lg">{newService.description}</p>
+          <p className="bg-blue-100 px-4 py-2 mx-auto w-6/12 font-bold rounded-lg">
             Price: {newService.price}
           </p>
         </div>
@@ -129,12 +135,12 @@ export default function CheckoutForm() {
         options={cardStyle}
         onChange={handleChange}
       />
-      <button disabled={processing || disabled || succeeded} id="submit">
+      <button disabled={processing || disabled || succeeded} id="submit" className="w-6/12 mx-auto rounded my-2">
         <span id="button-text">
           {processing ? (
             <div className="spinner" id="spinner"></div>
           ) : (
-            "Pay now"
+            "Pay Now"
           )}
         </span>
       </button>
