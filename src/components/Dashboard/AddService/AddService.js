@@ -3,16 +3,16 @@ import Sidebar from '../Sidebar/Sidebar';
 import Swal from 'sweetalert2'
 
 const AddService = () => {
-    const [adminInfo, setAdminInfo] = useState({})
+    const [newProductInfo, setNewProductInfo] = useState({})
     const [file, setFile] = useState(null)
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
         formData.append('file', file);
-        formData.append('title', adminInfo.title);
-        formData.append('description', adminInfo.description);
-        formData.append('price', adminInfo.price);
+        formData.append('title', newProductInfo.title);
+        formData.append('description', newProductInfo.description);
+        formData.append('price', newProductInfo.price);
         fetch('https://warm-springs-45915.herokuapp.com/addService', {
             method: 'POST',
             body: formData
@@ -30,9 +30,9 @@ const AddService = () => {
     }
 
     const handleBlur = (e) => {
-        const newAdminInfo = { ...adminInfo };
-        newAdminInfo[e.target.name] = e.target.value;
-        setAdminInfo(newAdminInfo)
+        const newnewProductInfo = { ...newProductInfo };
+        newnewProductInfo[e.target.name] = e.target.value;
+        setNewProductInfo(newnewProductInfo)
     }
     const handleFileChange = (e) => {
         const newFile = e.target.files[0]
@@ -73,7 +73,7 @@ const AddService = () => {
                     </div>
                       </div>
                     </div>
-                    <button className="block btn-black sm:w-6/12 md:w-8/12 lg:w-4/12 w-full text-white capitalize text-xl mx-auto py-3 rounded" type="submit">Add Service</button>
+                    <button className="block btn-black sm:w-6/12 md:w-8/12 lg:w-4/12 w-full text-white capitalize text-xl mx-auto py-2 rounded" type="submit">Add Service</button>
                   </form>
                 </div>
               </div>

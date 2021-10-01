@@ -52,7 +52,7 @@ const ServiceList = () => {
         <div className="col-md-9 col-lg-10 text-center pt-4">
           <table className="table">
             <thead>
-              <tr className="bg-gray-200 border-1 border-black">
+              <tr className="bg-gray-200 border-2 border-gray-300">
                 <th>Sr No</th>
                 <th>Name</th>
                 <th>Email</th>
