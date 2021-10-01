@@ -1,8 +1,4 @@
-import React from "react";
-
 const FeedBackDetails = ({ feedBack }) => {
-  const description = feedBack.description;
-  const newDescription = description.split(" ").slice(0, 14).join(" ");
   return (
     <div className="row mx-auto text-center my-3">
       {/* img-are */}
@@ -18,9 +14,9 @@ const FeedBackDetails = ({ feedBack }) => {
       </div>
 
       {/* text-area */}
-      <h6 className="font-bold text-lg mt-2 w-full">{feedBack.name}</h6>
-      <h5 className="text-secondary py-1 uppercase ">{feedBack.designation}</h5>
-      <h5 className="text-dark">" {newDescription} "</h5>
+      <h6 className="font-bold text-xl mt-2 w-full">{feedBack.name}</h6>
+      <h5 className="text-secondary font-semibold py-1">{feedBack.designation}</h5>
+      <h5 className="text-dark text-lg"><span className="text-red-500 font-extrabold">"</span>{feedBack.description}<span className="text-red-500 font-extrabold">"</span></h5>
     </div>
   );
 };

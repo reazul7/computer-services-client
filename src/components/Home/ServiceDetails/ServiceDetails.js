@@ -6,7 +6,7 @@ const ServiceDetails = ({ service }) => {
   const { _id, image, title, description, price } = service;
 
   return (
-    <div className="m-2 border-gray-800 bg-gray-100 relative text-center card-container rounded shadow">
+    <div className="m-2 border-gray-800 bg-gray-100 relative text-center card-container rounded">
       <Flip>
         <div className="pt-1">
           <img
@@ -16,14 +16,14 @@ const ServiceDetails = ({ service }) => {
           />
         </div>
 
-        <div class="pb-2">
-          <p class="title text-lg font-bold block cursor-pointer text-gray-500 hover:text-yellow-500">
+        <div class="pb-2 ">
+          <p class="title text-lg font-bold block cursor-pointer text-gray-700 hover:text-yellow-500">
             {title}
           </p>
 
-          <p class="title text-base block capitalize cursor-pointer text-gray-500 hover:text-yellow-500">
+          {/* <p class="title text-base block capitalize cursor-pointer text-gray-500 hover:text-yellow-500">
             {description.slice(0, 50)}
-          </p>
+          </p> */}
 
           <p class="text-gray-900 rounded text-lg font-bold">${price}</p>
 
