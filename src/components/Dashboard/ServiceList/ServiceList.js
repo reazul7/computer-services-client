@@ -50,6 +50,9 @@ const ServiceList = () => {
 
         {/* Show all servies status */}
         <div className="col-md-9 col-lg-10 text-center pt-4">
+        <p className="text-2xl font-bold pb-4 text-gray-700 animate-pulse">
+            All ordered services view
+          </p>
           <table className="table">
             <thead>
               <tr className="bg-gray-200 border-2 border-gray-300">

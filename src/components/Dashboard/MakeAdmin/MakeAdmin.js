@@ -91,7 +91,7 @@ const MakeAdmin = () => {
                 )}
               </p>
             </div>
-            <button type="submit" className="block btn-black sm:w-6/12 md:w-8/12 lg:w-4/12 w-full text-white capitalize text-xl mx-auto py-2 rounded">
+            <button type="submit" className="block bg-black  sm:w-6/12 md:w-8/12 lg:w-6/12 w-full text-white capitalize text-xl mx-auto py-2 rounded">
               Make an Admin
             </button>
           </form>

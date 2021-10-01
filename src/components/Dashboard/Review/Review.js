@@ -44,10 +44,10 @@ const Review = () => {
           <Sidebar></Sidebar>
         </div>
 
-        <div className="col-md-9 col-lg-10 text-center">
-          <h4 className="pt-5 pb-3 text-3xl text-black font-semibold">
-            Order Review
-          </h4>
+        <div className="col-md-9 col-lg-10 text-center py-4">
+        <p className="text-2xl font-bold text-gray-700 animate-pulse pb-3">
+            Give us your important review...
+          </p>
           <form
             action=""
             onSubmit={handleReviewSubmit}
@@ -82,7 +82,7 @@ const Review = () => {
               required
             />
             <br />
-            <button type="submit" className="btn-black mt-4">
+            <button type="submit" className="bg-black px-3 py-2 rounded mt-4 w-6/12 md:w-5/12 lg:w-4/12 xl:w-3/12 mx-auto">
               Submit
             </button>
           </form>

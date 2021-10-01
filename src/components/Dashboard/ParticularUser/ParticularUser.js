@@ -3,7 +3,7 @@ const ParticularUser = ({particularUser}) => {
     return (
         <div className="m-3 rounded-lg border-gray-300 border-1 shadow-xl relative text-center card-container">
             <img className="w-11/12 h-60 py-2 rounded-lg m-auto object-contain" src={`data:image/jpeg;base64,${particularUser?.image || ""}`} alt="" />
-            <button className="btn-black capitalize w-1/2 mx-auto mt-4">{particularUser.status}</button>
+            <button className="bg-black py-2 capitalize w-1/2 mx-auto mt-4">{particularUser.status}</button>
                     
             <div className="card-body items-center">
                 <h5 className="card-title fw-bold m-0">{particularUser.service}</h5>

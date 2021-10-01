@@ -72,7 +72,7 @@ const Sidebar = () => {
           )}
         </ul>
         <div className="py-2 font-bold py-2 text-lg">
-          <Link to="/" className="btn-black hover:text-white">
+          <Link to="/" className="bg-black px-3 py-1 rounded text-white">
             Home
           </Link>
         </div>

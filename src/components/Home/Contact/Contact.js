@@ -46,7 +46,7 @@ const Contact = () => {
                                     <textarea cols="30" rows="8" name="message" placeholder="Your Message" id="" className="form-control" required/>
                                 </div>
                                 <div className="col-12 form-group mx-auto py-2">
-                                    <input type="submit"  id="" className="btn-black font-bold" value="Send Mail"/>
+                                    <input type="submit"  id="" className="bg-black text-white font-bold" value="Send Mail"/>
                                 </div>
                             </div>
                         </form>

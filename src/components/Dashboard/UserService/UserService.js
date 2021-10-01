@@ -26,7 +26,7 @@ const UserService = () => {
         <div className="col-md-9 col-lg-10 text-center">
           <div className="pt-5 pb-3 text-center justify-content-around font-bold">
             <h2 className="text-xl">
-              <span className="text-blue-700">{loggedInUser.name}</span>'s all
+              <span className="text-blue-700 animate-pulse">{loggedInUser.name}</span>'s all
               order List
             </h2>
           </div>

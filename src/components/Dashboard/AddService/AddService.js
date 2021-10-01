@@ -73,7 +73,7 @@ const AddService = () => {
                     </div>
                       </div>
                     </div>
-                    <button className="block btn-black sm:w-6/12 md:w-8/12 lg:w-4/12 w-full text-white capitalize text-xl mx-auto py-2 rounded" type="submit">Add Service</button>
+                    <button className="block bg-black sm:w-6/12 md:w-8/12 lg:w-4/12 w-full text-white capitalize text-xl mx-auto py-2 rounded" type="submit">Add Service</button>
                   </form>
                 </div>
               </div>

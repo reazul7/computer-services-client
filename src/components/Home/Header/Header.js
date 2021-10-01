@@ -1,4 +1,3 @@
-import React from "react";
 import banner from "../../../images/pc-services-home-banner.png";
 import apple from "../../../images/apple.png";
 import asus from "../../../images/asus.png";
@@ -37,7 +36,7 @@ const Header = () => {
                 Best computer service provider in your town
               </p>
               <a href="https://www.linkedin.com/in/reazul7/" target="_blank">
-                <button className="btn-black w-25">Hire Me</button>
+                <button className="bg-black rounded w-25">Hire Me</button>
               </a>
             </div>
             <div className="col-md-6 align-self-center">
