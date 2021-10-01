@@ -66,10 +66,8 @@ const ServiceList = () => {
             <tbody>
               {/* spinner */}
               {showAllData.length === 0 && (
-                <div class="flex items-center justify-center pt-5 mx-auto">
-                  <div class="spinner-border" role="status">
-                    <span class="sr-only">Loading...</span>
-                  </div>
+                <div class="flex items-center justify-center h-full m-auto">
+                  <div class="w-24 h-24 border-t-8 border-b-8 border-blue-500 rounded-full animate-spin"></div>
                 </div>
               )}
 

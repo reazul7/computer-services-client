@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import FeedBackDetails from "../FeedBackDetails/FeedBackDetails";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -59,12 +59,10 @@ const FeedBack = () => {
           className="py-5"
         >
           {newFeedback.length === 0 && (
-                    <div className="text-center">
-                        <div class="spinner-border" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                    </div>
-                )}
+            <div class="flex items-center justify-center h-full m-auto">
+              <div class="w-24 h-24 border-t-8 border-b-8 border-blue-500 rounded-full animate-spin"></div>
+            </div>
+          )}
           {newFeedback.map((feedback) => (
             <FeedBackDetails
               key={feedback._id}

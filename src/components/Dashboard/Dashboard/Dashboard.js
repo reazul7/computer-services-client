@@ -18,9 +18,7 @@ const Dashboard = () => {
           
             <div className="my-5">
               <h3 className="text-center text-xl">
-                Welcome to{" "}
-                <span className="font-bold text-green-600"> Admin </span>{" "}
-                Dashboard
+                Welcome to Admin Dashboard
               </h3>
               <h3 className="text-center text-xl">
                 Admin Name:{" "}

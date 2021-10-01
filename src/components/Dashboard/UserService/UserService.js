@@ -32,10 +32,8 @@ const UserService = () => {
           </div>
           <div className="mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
             {particularUser.length === 0 && (
-              <div className="text-center">
-                <div class="spinner-border" role="status">
-                  <span class="visually-hidden">Loading...</span>
-                </div>
+              <div class="flex items-center justify-center h-full m-auto">
+                <div class="w-24 h-24 border-t-8 border-b-8 border-blue-500 rounded-full animate-spin"></div>
               </div>
             )}
             {particularUser.map((user) => (

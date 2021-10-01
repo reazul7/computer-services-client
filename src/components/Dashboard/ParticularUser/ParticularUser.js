@@ -2,7 +2,7 @@ const ParticularUser = ({particularUser}) => {
     // const newImage = JSON.stringify(particularUser.image)
     return (
         <div className="m-3 rounded-lg border-gray-300 border-1 shadow-xl relative text-center card-container">
-            <img className="w-11/12 h-60 py-2 rounded shadow m-auto object-contain" src={`data:image/jpeg;base64,${particularUser?.image || ""}`} alt="" />
+            <img className="w-11/12 h-60 py-2 rounded-lg m-auto object-contain" src={`data:image/jpeg;base64,${particularUser?.image || ""}`} alt="" />
             <button className="btn-black capitalize w-1/2 mx-auto mt-4">{particularUser.status}</button>
                     
             <div className="card-body items-center">

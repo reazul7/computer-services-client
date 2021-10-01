@@ -9,22 +9,24 @@ const promise = loadStripe(
 
 const PlaceService = () => {
   return (
-    <div className="row">
-      {/* sidebar */}
-      <div className="col-md-3 col-lg-2 bg-gray-200 md:h-screen h-full">
-        <Sidebar></Sidebar>
-      </div>
-      
-      {/* payment-area */}
-      <div className="col-md-9 col-lg-10 text-center">
-        <p className="py-5 text-2xl font-bold text-blue-700">
-          International Payment Getway
-        </p>
-        <div className="row">
-          <div className="col-sm-12 col-md-8 col-lg-6 mx-auto">
-            <Elements stripe={promise}>
-              <CheckoutForm />
-            </Elements>
+    <div className="container-fluid">
+      <div className="row">
+        {/* sidebar */}
+        <div className="col-md-3 col-lg-2 bg-gray-200 md:h-screen h-full">
+          <Sidebar></Sidebar>
+        </div>
+
+        {/* payment-area */}
+        <div className="col-md-9 col-lg-10 text-center">
+          <p className="py-5 text-2xl font-bold text-blue-700">
+            International Payment Getway
+          </p>
+          <div className="row">
+            <div className="col-sm-12 col-md-8 col-lg-6 mx-auto">
+              <Elements stripe={promise}>
+                <CheckoutForm />
+              </Elements>
+            </div>
           </div>
         </div>
       </div>

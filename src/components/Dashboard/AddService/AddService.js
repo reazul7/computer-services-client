@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
+import Swal from 'sweetalert2'
 
 const AddService = () => {
     const [adminInfo, setAdminInfo] = useState({})
@@ -18,7 +19,12 @@ const AddService = () => {
         })
             .then(res => res.json())
             .then(result => {
-                alert('Service Added Successfully')
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Service Added Successfully',
+                    showConfirmButton: false,
+                    timer: 2000
+                  })
                 e.target.reset()
             })
     }
@@ -34,43 +40,43 @@ const AddService = () => {
     }
 
     return (
-            <div className="row">
-                <div className="col-md-3">
+            <div className="container-fluid">
+                <div className="row">
+                <div className="col-md-3 col-lg-2 bg-gray-200 md:h-screen h-full">
                     <Sidebar/>
                 </div>
                 
-                <div className="col-md-9 g-0 mt-5">
-                    <form action="" onSubmit={handleSubmit}>
-                        <div className="row">
-                            <div className="col-md">
-                                <div className="form-group">
-                                    <label className="fw-bold" htmlFor="">Service Title</label>
-                                    <input onBlur={handleBlur} type="text" name="title" placeholder="Title" className="form-control" required/>
-                                </div>
-                                <div className="form-group">
-                                    <label className="fw-bold" htmlFor="">Description</label>
-                                    <textarea className="form-control" onBlur={handleBlur} name="description" id="" cols="60" rows="5" placeholder="Enter description" required/>
-                                </div>
-                                <div className="form-group">
-                                    <label className="fw-bold" htmlFor="">Price</label>
-                                    <br />
-                                    <input onBlur={handleBlur} name="price" type="number" id="" placeholder="Enter Price" required/>
-                                </div>
-                            </div>
-                            
-                            <div className="col-md">
-                                <div className="form-group">
-                                    <label className="fw-bold" htmlFor="">Picture</label>
-                                    <input onChange={handleFileChange} type="file" name="file" placeholder="Upload Image" className="form-control" required/>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="flex justify-center">
-                            <button type="submit" className="">Add Service</button>
-                        </div>
-                    </form>
+                {/* add service */}
+                <div className="col-md-9 col-lg-10 text-center py-5">
+                  <p className="text-2xl font-bold pb-4 text-gray-700 animate-pulse">Add New Product</p>
+                  <form action="" onSubmit={handleSubmit} className="w-full md:w-8/12 mx-auto shadow-xl">
+                    <div className="flex flex-col mb-4">
+                        <label className="mb-2 font-bold text-xl text-gray-900 text-left">Service Name</label>
+                        <input className="border py-2 px-3 text-grey-800" onBlur={handleBlur} type="text" name="title" placeholder="Service Name" required />
+                    </div>
+                    <div className="flex flex-col mb-4">
+                        <label className="mb-2 font-bold text-xl text-gray-900 text-left">Service Description</label>
+                        <textarea className="border py-2 px-3 text-grey-800" onBlur={handleBlur} name="description" id="" cols="60" rows="5" placeholder="Enter Service Description" required />
+                    </div>
+                    <div className="row">
+                      <div className="col-md-6">
+                      <div className="flex flex-col mb-4">
+                        <label className="mb-2 font-bold text-xl text-gray-900 text-left">Add Price</label>
+                        <input className="border py-2 px-3 text-grey-800" onBlur={handleBlur} name="price" type="number" placeholder="Service Price" required/>
+                    </div>
+                    
+                      </div>
+                      <div className="col-md-6">
+                      <div className="flex flex-col mb-4">
+                        <label className="mb-2 font-bold text-xl text-gray-900 text-left">Select Picture</label>
+                        <input className="border py-2 px-3 text-grey-800" onChange={handleFileChange} type="file" name="file" placeholder="Upload Image" required/>
+                    </div>
+                      </div>
+                    </div>
+                    <button className="block btn-black sm:w-6/12 md:w-8/12 lg:w-4/12 w-full text-white capitalize text-xl mx-auto py-3 rounded" type="submit">Add Service</button>
+                  </form>
                 </div>
+              </div>
             </div>
     );
 };

@@ -42,6 +42,9 @@ const Sidebar = () => {
           {loggedInUser.setUser ? (
             <div className="w-40">
               <li className="font-bold py-2 text-lg">
+                <Link to="/dashboard">Admin Dashboard</Link>
+              </li>
+              <li className="font-bold py-2 text-lg">
                 <Link to="/serviceList">All Services Status</Link>
               </li>
               <li className="font-bold py-2 text-lg">
