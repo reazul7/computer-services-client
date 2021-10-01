@@ -33,38 +33,61 @@ const MakeAdmin = () => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-md-3 bg-gray-200 md:h-screen h-full">
+        <div className="col-md-3 col-lg-2 bg-gray-200 md:h-screen h-full">
           <Sidebar></Sidebar>
         </div>
-        <div className="col-md-9 mt-2">
-        <div className="text-center py-4 text-lg font-bold">
-          <h2>Add admin</h2>
-          <h4 className="text-blue-500 py-2">{loggedInUser.name}</h4>
-        </div>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="form-group">
-              <label>Email</label>
+        <div className="col-md-9 col-lg-10 text-center py-5">
+          <p className="text-2xl font-bold pb-4 text-gray-700 animate-pulse">
+            Make Admin using Gmail
+          </p>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="w-full md:w-8/12 mx-auto shadow-xl"
+          >
+            {/* email-area */}
+            <div className="flex flex-col mb-4">
+              <label className="mb-2 font-bold text-xl text-gray-900 text-left">
+                Enter New Gmail
+              </label>
               <input
-                type="text"
-                className="form-control"
-                placeholder="Enter Email ID"
-                {...register("email", { required: true })}
+                id="email"
+                {...register("email", {
+                  required: "required",
+                  pattern: {
+                    value: /\S+@\S+\.\S+/,
+                    message: "Entered value does not match email format",
+                  },
+                })}
+                type="email"
               />
-              {errors.name && (
-                <span className="text-danger">This field is required</span>
-              )}
+              <p className="text-red-500">
+                {errors.email && (
+                  <span role="alert">{errors.email.message}</span>
+                )}
+              </p>
             </div>
-            <div className="form-group">
-              <label>Password</label>
+
+            {/* password-area */}
+            <div className="flex flex-col mb-4">
+              <label className="mb-2 font-bold text-xl text-gray-900 text-left">
+                Give a Admin Password
+              </label>
               <input
+                id="password"
+                {...register("password", {
+                  required: "required",
+                  minLength: {
+                    value: 6,
+                    message: "min length is 6",
+                  },
+                })}
                 type="password"
-                className="form-control"
-                placeholder="Enter password"
-                {...register("password", { required: true })}
               />
-              {errors.name && (
-                <span className="text-danger">This field is required</span>
-              )}
+              <p className="text-red-500">
+                {errors.password && (
+                  <span role="alert">{errors.password.message}</span>
+                )}
+              </p>
             </div>
             <button type="submit" className="btn btn-primary">
               Send
