@@ -25,7 +25,7 @@ const Contact = () => {
         <div className="contact" id="contact">
             <div className="container pb-5 mb-5">
                 <div className="row">
-                <h3 className="text-center text-2xl fw-bold py-4"><span style={{color: '#E45E53'}}>Contact</span> With US</h3>
+                <h3 className="text-center text-2xl fw-bold py-4 animate-pulse ">Feel Free To <span className="text-blue-500">Contact</span> With Us</h3>
                     <div className="col-md-6 pb-4 align-item center">
                         <img src="https://thumbs.gfycat.com/BlaringWeightyCollie-max-1mb.gif" alt="" />
                     </div>

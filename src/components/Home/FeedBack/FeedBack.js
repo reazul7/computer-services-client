@@ -35,7 +35,7 @@ const FeedBack = () => {
   return (
     <div className="container my-5" id="feedback">
       <div className="row">
-        <h3 className="text-center text-2xl fw-bold">
+        <h3 className="text-center text-2xl fw-bold animate-pulse">
           Client <span className="text-blue-500">Feedback</span>
         </h3>
       </div>

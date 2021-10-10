@@ -12,7 +12,7 @@ const Services = () => {
     return (
         <div className="container my-5 pt-5">
             <div className="mb-3">
-                <h3 className="text-center text-2xl fw-bold">Our <span className="text-blue-500">Services</span></h3>
+                <h3 className="text-center text-2xl fw-bold animate-pulse">Our <span className="text-blue-500">Services</span></h3>
             </div>
             <div className="mx-auto grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-center">
                 {service.length === 0 && (
