@@ -8,15 +8,15 @@ const ServiceDetails = ({ service }) => {
   return (
     <div className="m-2 border-gray-800 bg-gray-100 relative text-center card-container rounded">
       <Flip>
-        <div className="pt-1">
+        <div className="pt-2">
           <img
-            className="w-11/12 h-52 m-auto object-contain rounded-lg"
+            className="w-11/12 h-48 m-auto object-fit rounded-lg"
             src={`data:image/jpeg;base64,${image.img}`}
             alt="service-img"
           />
         </div>
 
-        <div className="pb-2 ">
+        <div className="py-2">
           <p className="title text-lg font-bold block cursor-pointer text-gray-700 hover:text-yellow-500">
             {title}
           </p>
@@ -27,7 +27,7 @@ const ServiceDetails = ({ service }) => {
 
           <p className="text-gray-900 rounded text-lg font-bold">{price}<span className="text-xl font-extrabold">৳</span></p>
 
-          <p className="star flex text-yellow-400 justify-content-center">
+          <p className="star py-1 flex text-yellow-400 justify-content-center">
             <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill />{" "}
             <BsStarFill />
           </p>
