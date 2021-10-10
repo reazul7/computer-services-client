@@ -14,10 +14,10 @@ const NavBar = () => {
   };
   return (
     <nav className="navbar navbar-expand-md navbar-light row ms-auto">
-      <div className="col-md-4 text-center pr-5">
+      <div className="col-md-4 text-center pr-5 nav-btn-area">
         <Link className="navbar-brand flex text-center justify-center pb-2" to="/">
           <img className="w-12" src={logo} alt="" />
-          <span className="pt-2 px-2">Computer Services</span>
+          <span className="pt-2 px-2 service-name">Computer Services</span>
         </Link>
         <button
           className="navbar-toggler"
