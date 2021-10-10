@@ -14,13 +14,13 @@ const NavBar = () => {
   };
   return (
     <nav className="navbar navbar-expand-md navbar-light row ms-auto">
-      <div className="col-md-4 text-center">
-        <Link class="navbar-brand flex text-center justify-center pb-2" to="/">
-          <img style={{ width: "50px" }} src={logo} alt="" />
-          <span className="pt-2 pl-2">Computer Services</span>
+      <div className="col-md-4 text-center pr-5">
+        <Link className="navbar-brand flex text-center justify-center pb-2" to="/">
+          <img className="w-12" src={logo} alt="" />
+          <span className="pt-2 px-2">Computer Services</span>
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -28,14 +28,14 @@ const NavBar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
       </div>
 
       <div className="col-md-8">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
-            <li class="nav-item active px-1">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+            <li className="nav-item active px-1">
               <Link
                 className="nav-link fw-bold hover:bg-blue-300 rounded hover:shadow-xl"
                 to=""
@@ -43,7 +43,7 @@ const NavBar = () => {
                 Home
               </Link>
             </li>
-            <li class="nav-item px-1">
+            <li className="nav-item px-1">
               <Link
                 className="nav-link fw-bold hover:bg-blue-300 rounded hover:shadow-xl"
                 to="/dashboard"
@@ -51,7 +51,7 @@ const NavBar = () => {
                 Dashboard
               </Link>
             </li>
-            <li class="nav-item px-1">
+            <li className="nav-item px-1">
               <a
                 className="nav-link fw-bold hover:bg-blue-300 rounded hover:shadow-xl"
                 href="#contact"
@@ -59,7 +59,7 @@ const NavBar = () => {
                 Contact Us
               </a>
             </li>
-            <li class="nav-item px-1">
+            <li className="nav-item px-1">
               <a
                 className="nav-link fw-bold hover:bg-blue-300 rounded hover:shadow-xl"
                 href="#feedback"

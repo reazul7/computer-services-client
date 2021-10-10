@@ -55,7 +55,7 @@ const LogIn = () => {
             <Link
               to="/"
               style={{ textAlign: "center", color: "black" }}
-              class="navbar-brand d-sm-block mt-5"
+              className="navbar-brand d-sm-block mt-5"
               href="#"
             >
               <div className="flex justify-center">

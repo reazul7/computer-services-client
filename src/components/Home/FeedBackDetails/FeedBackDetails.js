@@ -7,7 +7,7 @@ const FeedBackDetails = ({ feedBack }) => {
         <div className="w-6/12 sm:w-4/12 px-2">
           <img
             src={feedBack.newFile}
-            alt="image loading..."
+            alt="Loading..."
             className="shadow-lg rounded-bl-3xl rounded-tr-3xl w-full h-auto align-middle border-none"
           />
         </div>

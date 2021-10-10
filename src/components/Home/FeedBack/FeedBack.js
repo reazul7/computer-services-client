@@ -29,7 +29,9 @@ const FeedBack = () => {
   useEffect(() => {
     fetch("https://warm-springs-45915.herokuapp.com/seeReview")
       .then((res) => res.json())
-      .then((data) => setFeedBack(data));
+      .then((data) => {
+        setFeedBack(data)
+      });
   }, []);
 
   return (
@@ -59,8 +61,8 @@ const FeedBack = () => {
           className="py-5"
         >
           {newFeedback.length === 0 && (
-            <div class="flex items-center justify-center h-full m-auto">
-              <div class="w-24 h-24 border-t-8 border-b-8 border-blue-500 rounded-full animate-spin"></div>
+            <div className="flex items-center justify-center h-full m-auto">
+              <div className="w-24 h-24 border-t-8 border-b-8 border-blue-500 rounded-full animate-spin"></div>
             </div>
           )}
           {newFeedback.map((feedback) => (

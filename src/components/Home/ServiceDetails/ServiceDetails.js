@@ -10,30 +10,30 @@ const ServiceDetails = ({ service }) => {
       <Flip>
         <div className="pt-1">
           <img
-            className="w-10/12 h-60 m-auto object-contain rounded-lg"
+            className="w-11/12 h-52 m-auto object-contain rounded-lg"
             src={`data:image/jpeg;base64,${image.img}`}
             alt="service-img"
           />
         </div>
 
-        <div class="pb-2 ">
-          <p class="title text-lg font-bold block cursor-pointer text-gray-700 hover:text-yellow-500">
+        <div className="pb-2 ">
+          <p className="title text-lg font-bold block cursor-pointer text-gray-700 hover:text-yellow-500">
             {title}
           </p>
 
-          {/* <p class="title text-base block capitalize cursor-pointer text-gray-500 hover:text-yellow-500">
+          {/* <p className="title text-base block capitalize cursor-pointer text-gray-500 hover:text-yellow-500">
             {description.slice(0, 50)}
           </p> */}
 
-          <p class="text-gray-900 rounded text-lg font-bold">${price}</p>
+          <p className="text-gray-900 rounded text-lg font-bold">{price}<span className="text-xl font-extrabold">৳</span></p>
 
-          <p class="star flex text-yellow-400 justify-content-center">
+          <p className="star flex text-yellow-400 justify-content-center">
             <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill />{" "}
             <BsStarFill />
           </p>
           <Link to={`/placeService/${_id}`}>
             <div className="p-2 flex justify-center">
-              <button className="rounded bg-blue-400 w-8/12 mb-1">
+              <button className="rounded bg-blue-400 w-8/12 mb-1 py-2">
                 Buy Now
               </button>
             </div>

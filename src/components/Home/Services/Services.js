@@ -16,8 +16,8 @@ const Services = () => {
             </div>
             <div className="mx-auto grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-center">
                 {service.length === 0 && (
-                    <div class="flex items-center justify-center h-full m-auto">
-                        <div class="w-24 h-24 border-t-8 border-b-8 border-blue-500 rounded-full animate-spin"></div>
+                    <div className="flex items-center justify-center h-full m-auto">
+                        <div className="w-24 h-24 border-t-8 border-b-8 border-blue-500 rounded-full animate-spin"></div>
                     </div>
                 )}
                 {

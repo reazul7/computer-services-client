@@ -54,12 +54,12 @@ const Sliders = () => {
                             itemClass="carousel-item-padding-40-px"
                             className="py-5"
                         >
-                            <div className="p-3"><img class="img-fluid" src={workshop1} alt="" /></div>
-                            <div className="p-3"><img class="img-fluid" src={workshop2} alt="" /></div>
-                            <div className="p-3"><img class="img-fluid" src={workshop3} alt="" /></div>
-                            <div className="p-3"><img class="img-fluid" src={workshop4} alt="" /></div>
-                            <div className="p-3"><img class="img-fluid" src={workshop5} alt="" /></div>
-                            <div className="p-3"><img class="img-fluid" src={workshop6} alt="" /></div>
+                            <div className="p-3"><img className="img-fluid" src={workshop1} alt="" /></div>
+                            <div className="p-3"><img className="img-fluid" src={workshop2} alt="" /></div>
+                            <div className="p-3"><img className="img-fluid" src={workshop3} alt="" /></div>
+                            <div className="p-3"><img className="img-fluid" src={workshop4} alt="" /></div>
+                            <div className="p-3"><img className="img-fluid" src={workshop5} alt="" /></div>
+                            <div className="p-3"><img className="img-fluid" src={workshop6} alt="" /></div>
                         </Carousel>
                     </div>
                 </div>
