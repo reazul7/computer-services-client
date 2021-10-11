@@ -25,7 +25,7 @@ const ServiceDetails = ({ service }) => {
             {description.slice(0, 50)}
           </p> */}
 
-          <p className="text-gray-900 rounded text-lg font-bold">{price}<span className="text-xl font-extrabold">৳</span></p>
+          <p className="text-gray-900 rounded text-lg font-bold">{price} <span className="text-2xl">৳</span></p>
 
           <p className="star py-1 flex text-yellow-400 justify-content-center">
             <BsStarFill /> <BsStarFill /> <BsStarFill /> <BsStarFill />{" "}
