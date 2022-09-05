@@ -79,6 +79,6 @@
 
 
 ## Contact With Me
-[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' title="Github" height='30' width='30'>](https://github.com/reazul7)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' title="linkedin" alt='linkedin' height='40'>](https://www.linkedin.com/in/reazul7/)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg' alt='facebook' title="facebook" height='40'>](https://www.facebook.com/reazul.islam.1426876/)[<img src='https://img.icons8.com/ios-filled/50/000000/portfolio.png' alt='github' title="Portfolio" height='40'>](https://portfolio-8a25a.web.app/)
+[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' title="Github" height='30' width='30'>](https://github.com/reazul7)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' title="linkedin" alt='linkedin' height='30' width='30'>](https://www.linkedin.com/in/reazul7/)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg' alt='facebook' title="facebook" height='30' width='30'>](https://www.facebook.com/reazul.islam.1426876/)[<img src='https://img.icons8.com/ios-filled/50/000000/portfolio.png' alt='github' title="Portfolio" height='30' width='30'>](https://portfolio-8a25a.web.app/)
 
 ![GitHub stats](https://github-readme-stats.vercel.app/api?username=reazul7&show_icons=true)  
